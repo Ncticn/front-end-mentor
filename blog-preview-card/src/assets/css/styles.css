@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+:root {
+  --color-yellow: #f4d04e;
+  --color-gray-950: #111111;
+  --color-gray-500: #6b6b6b;
+  --color-white: #ffffff;
+  --spacing-300: 24px;
+  --spacing-150: 12px;
+  --spacing-100: 8px;
+  --spacing-50: 4px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +17,62 @@
 }
 
 body {
-  background-color: black;
+  font-family: 'Figtree', sans-serif;
+  background-color: var(--color-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.title-preset {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-gray-950);
+  cursor: pointer;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+.title-preset:hover {
+  color: var(--color-yellow);
+}
+
+.text-s-medium-preset {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-gray-500);
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.text-xs-medium-preset {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.text-xs-extrabold-preset {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--color-gray-950);
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .title-preset {
+    font-size: 20px;
+  }
+  .text-s-medium-preset {
+    font-size: 14px;
+  }
+  .text-xs-medium-preset,
+  .text-xs-extrabold-preset {
+    font-size: 12px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
