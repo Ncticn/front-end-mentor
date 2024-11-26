@@ -1,7 +1,81 @@
+<script setup>
+// İmports
+import TagBase from './TagBase.vue'
+import AvatarBase from './AvatarBase.vue'
+
+// Props
+const props = defineProps({
+  tagValue: {
+    type: String,
+    required: false,
+  },
+  published: {
+    type: String,
+    required: true,
+  },
+  title: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  avatarImg: {
+    type: String,
+    required: true,
+  },
+  avatarName: {
+    type: String,
+    required: true,
+  },
+})
+</script>
 <template>
-    <div>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius omnis, eaque saepe nulla sunt accusamus molestias maiores earum alias aperiam doloremque, molestiae repellat hic error pariatur praesentium, fugit eum exercitationem repellendus odit? Incidunt laudantium, rerum a recusandae esse et perspiciatis perferendis possimus. Molestiae nisi quae voluptas modi sapiente quidem ipsa odit nostrum maiores, eveniet libero, ipsam accusamus perferendis, rem illum? Et recusandae nostrum reprehenderit autem placeat ad porro natus laboriosam assumenda. Qui, nihil doloribus! Repellendus alias omnis ad obcaecati ipsam provident non minus consequatur mollitia vel delectus debitis earum vero, dolorum, voluptatum aliquam sit minima, veniam at et veritatis. Dolor fugit adipisci alias rerum placeat totam, quo maxime! Rerum neque laborum quidem. Laudantium, cum incidunt obcaecati distinctio eveniet nesciunt officia ipsam vitae molestias voluptatum, id, voluptatibus repudiandae dicta expedita perspiciatis accusamus fugit amet at nisi soluta numquam nihil? Molestias perspiciatis sequi commodi repellendus, perferendis dolore quas, rem ea voluptas ratione ad itaque quo! Nesciunt ipsam cupiditate explicabo possimus, ipsum illum veniam dolor rem excepturi? Rem, dicta repellat tenetur nobis libero quidem, ea accusantium quam excepturi adipisci modi animi nam quia eaque repellendus nostrum reiciendis corrupti impedit, veniam odit error! Perspiciatis incidunt quaerat adipisci voluptatum vel reprehenderit iure magnam quidem voluptates veritatis, sit harum mollitia dolor. Quia eaque excepturi totam molestias libero harum, qui placeat. Ducimus cum praesentium hic laboriosam dicta eaque consectetur adipisci recusandae dolores repellendus. Aut eos quasi nesciunt aperiam placeat deleniti beatae iure totam voluptate eius inventore animi aspernatur, iste maxime quia tempora esse illo provident vitae corrupti facere! Vel ipsa dicta natus, necessitatibus eaque explicabo cum corporis ut fugit consequatur hic, unde accusamus eveniet ad, facilis sed facere nobis eius? Consequuntur mollitia error aperiam iusto. Dolore autem cupiditate doloribus ea rerum soluta voluptatum quasi consequuntur, itaque fugiat deleniti beatae. Vel officia blanditiis alias nobis eligendi excepturi asperiores perspiciatis dolores dolorum voluptas, unde fugit soluta molestiae nostrum nemo cupiditate itaque et nam, quo amet numquam illo. Itaque alias blanditiis obcaecati doloribus? Sapiente sit possimus corrupti fugit blanditiis fuga, iusto quaerat repudiandae magnam vel, expedita corporis porro tempore minima recusandae officia obcaecati ipsam doloribus assumenda id laborum. Adipisci recusandae cum esse nemo natus rem ipsum accusamus ratione qui rerum totam aut vero repellendus reiciendis harum sed praesentium, pariatur eum odit? Alias dolorum nostrum expedita sed blanditiis inventore quae laboriosam. Corrupti cumque ipsa optio vel placeat necessitatibus error delectus, minus eum hic quod enim asperiores libero itaque amet fugit ab dignissimos nemo a adipisci nobis voluptatibus commodi. Nihil odit voluptatum illo quas obcaecati distinctio quis veritatis suscipit! Vero ipsa explicabo, tempore, cumque deleniti tempora, dolores voluptates assumenda laborum illo numquam excepturi voluptatem sunt repellat ea recusandae exercitationem a commodi ratione? Rem suscipit dignissimos exercitationem est vero dolore perspiciatis, similique iusto. Consequuntur cum recusandae a voluptas beatae debitis distinctio illo vitae quibusdam officiis, facilis aspernatur neque illum doloremque! Quos aperiam maxime pariatur, architecto, vitae quasi delectus asperiores similique voluptate assumenda, vel facilis voluptatibus fugit doloremque libero incidunt quidem? Expedita molestiae esse iste, nostrum eveniet, sequi quos, perspiciatis vel rem dignissimos aut.
-        </p>
+  <div class="blog-preview-card">
+    <div class="blog-preview-card-img-wrapper">
+      <img
+        class="blog-preview-card-img"
+        src="../assets/img/illustration-article.svg"
+        alt="Card Image"
+      />
     </div>
+    <div class="blog-preview-card-content">
+      <TagBase v-if="props.tagValue" :model-value="props.tagValue" />
+      <span class="text-xs-medium-preset">{{ props.published }}</span>
+      <h1 class="title-preset">{{ props.title }}</h1>
+      <p class="text-s-medium-preset">{{ props.description }}</p>
+    </div>
+    <AvatarBase :img="props.avatarImg" :name="props.avatarName" />
+  </div>
 </template>
+<style lang="scss" scoped>
+.blog-preview-card {
+  max-width: 384px;
+  max-height: 522px;
+  padding: var(--spacing-300);
+  border: 1px solid var(--color-gray-950);
+  border-radius: 20px;
+  background-color: var(--color-white);
+  filter: drop-shadow(8px 8px 0px #000000);
+
+  &-img-wrapper {
+    margin-bottom: var(--spacing-300);
+  }
+
+  &-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: var(--spacing-150);
+    margin-bottom: 24px;
+  }
+}
+</style>
