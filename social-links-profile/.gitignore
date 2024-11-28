@@ -28,5 +28,4 @@ coverage
 
 *.tsbuildinfo
 
-# Scss
 styles.css.map
