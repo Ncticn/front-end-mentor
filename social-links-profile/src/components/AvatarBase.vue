@@ -12,15 +12,15 @@ const props = defineProps({
   </div>
 </template>
 <style>
-.avatar-base{
-    display: inline-block;
-    width: 85px;
-    height: 85px;
+.avatar-base {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
-.avatar-base-img{
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 100%;
+.avatar-base-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 100%;
 }
 </style>
