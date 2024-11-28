@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+import CardSocialLinks from './components/CardSocialLinks.vue'
+</script>
 
 <template>
   <main>
-    <h1>Hello World !</h1>
+    <CardSocialLinks />
   </main>
 </template>
