@@ -3,12 +3,12 @@ This is a solution to the [Social Links Profile](https://www.frontendmentor.io/c
 
 ## Contents
 
-- [The challenge](#the-challenge)
+- [The Challenge](#the-challenge)
 - [Technologies Used](#technologies-used)
 - [Setup](#setup)
 - [Author](#author)
 
-## The challenge
+## The Challenge
 
 Users should be able to:
 
