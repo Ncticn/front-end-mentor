@@ -6,7 +6,7 @@ import ButtonBase from './ButtonBase.vue'
   <div class="social-links-card">
     <div class="social-links-card-wrapper">
       <div class="social-links-card-profile-avatar">
-        <AvatarBase img-src="src/assets/img/avatar-jessica.jpeg" />
+        <AvatarBase img-src="/avatar-jessica.jpeg" />
       </div>
 
       <div class="social-links-card-profile-titles">
