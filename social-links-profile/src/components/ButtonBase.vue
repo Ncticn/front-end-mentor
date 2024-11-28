@@ -11,9 +11,9 @@ const props = defineProps({
 })
 </script>
 <template>
-  <button type="button" class="button-base">
-    <a :href="props.href" class="button-base-link text-bold-presets">{{ props.label }}</a>
-  </button>
+  <a :href="props.href" class="button-base">
+    <span class="button-base-link text-bold-presets">{{ props.label }}</span>
+  </a>
 </template>
 <style lang="css" scoped>
 .button-base {
@@ -25,7 +25,7 @@ const props = defineProps({
   border: none;
   background-color: var(--color-grey-700);
   border-radius: 0.5rem;
-  place-content: center;
+  text-align: center;
 }
 
 .button-base:hover {

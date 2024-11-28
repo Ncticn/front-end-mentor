@@ -11,7 +11,7 @@ import ButtonBase from './ButtonBase.vue'
 
       <div class="social-links-card-profile-titles">
         <h1 class="title-presets">Jessica Randall</h1>
-        <h3 class="subtitle-presets">London, United Kingdom</h3>
+        <p class="subtitle-presets">London, United Kingdom</p>
       </div>
 
       <p class="text-presets">"Front-end developer and avid reader."</p>
